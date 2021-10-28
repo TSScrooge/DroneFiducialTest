@@ -1,0 +1,11 @@
+import math
+
+CAMERA_FOV_IN_DEGREES = 75
+BIT_WIDTH = 6
+TAG_SIZE = 0.28
+CAMERA_HORIZONTAL_RESOLUTION = 3840
+PIXELS_FOR_BIT = 2*10/12
+
+max_dist = TAG_SIZE /(2 * math.tan( (BIT_WIDTH * math.radians(CAMERA_FOV_IN_DEGREES) * PIXELS_FOR_BIT) / (2 * CAMERA_HORIZONTAL_RESOLUTION ) ) )
+
+print("{:.2f}".format(max_dist) + "m")
